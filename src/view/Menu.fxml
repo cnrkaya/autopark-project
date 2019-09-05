@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #ccc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <TabPane layoutY="40.0" prefHeight="398.0" prefWidth="800.0" side="LEFT" style="-fx-background-color: #000;" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="120.0" tabMaxWidth="90.0" tabMinHeight="120.0" tabMinWidth="70.0">
+         <tabs>
+            <Tab style="-fx-background-color: #ccc;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="673.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <Label layoutX="139.0" layoutY="121.0" text="Vehicle Plate">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <TextField fx:id="plate1" layoutX="229.0" layoutY="107.0" prefHeight="45.0" prefWidth="166.0" promptText="35SA3442" />
+                        <Button fx:id="enterButton" layoutX="238.0" layoutY="280.0" mnemonicParsing="false" onAction="#vehicleEnters" prefHeight="31.0" prefWidth="114.0" text="Enter" />
+                        <Label layoutX="244.0" layoutY="14.0" text="Vehicle Entry">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <CheckBox fx:id="isOfficial" layoutX="246.0" layoutY="235.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="97.0" text="Is Offical" />
+                        <TextField fx:id="hour1" layoutX="235.0" layoutY="183.0" prefHeight="35.0" prefWidth="65.0" promptText="hour" />
+                        <TextField fx:id="minute1" layoutX="329.0" layoutY="182.0" prefHeight="36.0" prefWidth="65.0" promptText="minute" />
+                        <Label layoutX="146.0" layoutY="191.0" text="Entry Time">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="status1" layoutX="221.0" layoutY="77.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <Label text="Vehicle Entry">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab style="-fx-background-color: #ccc;">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <TextField fx:id="plate2" layoutX="229.0" layoutY="105.0" prefHeight="49.0" prefWidth="173.0" promptText="35SA1905" />
+                        <Label layoutX="244.0" layoutY="14.0" text="Vehicle Exit">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="143.0" layoutY="185.0" text="Exit Time">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="minute2" layoutX="329.0" layoutY="175.0" prefHeight="39.0" prefWidth="73.0" promptText="minute" />
+                        <TextField fx:id="hour2" layoutX="228.0" layoutY="176.0" prefHeight="38.0" prefWidth="72.0" promptText="hour" />
+                        <Label layoutX="132.0" layoutY="120.0" text="Vehicle Plate">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="exitButton" layoutX="266.0" layoutY="233.0" mnemonicParsing="false" onAction="#vehicleExits" prefHeight="33.0" prefWidth="106.0" text="Exit" />
+                        <Label fx:id="status2" layoutX="221.0" layoutY="77.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <Label text="Vehicle Exit">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab style="-fx-background-color: #ccc;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="800.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <DatePicker fx:id="beginDatepicker" layoutX="188.0" layoutY="174.0" />
+                        <DatePicker fx:id="endDatepicker" layoutX="188.0" layoutY="226.0" />
+                        <Label layoutX="244.0" layoutY="14.0" text="Subscription">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="381.0" layoutY="177.0" text="Begin date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="381.0" layoutY="229.0" text="End date">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="plate3" layoutX="188.0" layoutY="122.0" prefHeight="25.0" prefWidth="172.0" />
+                        <Label layoutX="381.0" layoutY="125.0" text="Car Plate">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="subscribeButton" layoutX="258.0" layoutY="280.0" mnemonicParsing="false" onAction="#subscribe" prefHeight="36.0" prefWidth="79.0" text="Subscribe">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="status3" layoutX="221.0" layoutY="77.0" textFill="RED">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <Label prefHeight="20.0" prefWidth="91.0" text="  Subscription">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Tab>
+            <Tab style="-fx-background-color: #ccc;">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="673.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <TextArea fx:id="recordList" editable="false" layoutX="44.0" layoutY="85.0" prefHeight="255.0" prefWidth="576.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font></TextArea>
+                        <Label layoutX="215.0" layoutY="34.0" text="AutoPark Informations">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <Label text="Information">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </graphic>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <ProgressBar fx:id="density" layoutX="620.0" layoutY="13.0" prefHeight="18.0" prefWidth="166.0" progress="0.3" />
+      <Label fx:id="cash" layoutX="14.0" layoutY="10.0" text="Cash : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="hourlyFee" layoutX="159.0" layoutY="12.0" text="Hourly Fee : 2.5 TL">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="capacity" layoutX="292.0" layoutY="12.0" text="Capacity : 20">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="517.0" layoutY="12.0" text="Parking Density">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="parkedVehicles" layoutX="384.0" layoutY="12.0" text="Parked Vehicles : 8">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Pane fx:id="enterance" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #ccc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="fee" layoutX="182.0" layoutY="167.0" prefHeight="49.0" prefWidth="166.0" promptText="horlyFee" />
+            <TextField fx:id="cap" layoutX="422.0" layoutY="167.0" prefHeight="49.0" prefWidth="172.0" promptText="Capacity" />
+            <Button fx:id="setButton" layoutX="325.0" layoutY="244.0" mnemonicParsing="false" onAction="#setAutoPark" prefHeight="59.0" prefWidth="105.0" text="Enter" />
+            <Text layoutX="450.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Capacity">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="220.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hourly Fee">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="59.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter values to start...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
